@@ -56,8 +56,8 @@ tar -zxf tmp-libxmlsec1.tar.gz # > /dev/null #TODO Hide this output
 rm tmp-libxmlsec1.tar.gz
 
 # export xmlsec loc and flags
-export LIBXMLSEC1=$(pwd)
-export CFLAGS="-I$(pwd)/include/xmlsec1"
+set-env LIBXMLSEC1 $(pwd)
+set-env CFLAGS "-I$(pwd)/include/xmlsec1"
 
 # Setup pip-pop (pip-diff)
 export PATH=$PATH:$ROOT_DIR/vendor/pip-pop
